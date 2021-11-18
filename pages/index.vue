@@ -2,7 +2,7 @@
   <div>
     <nav-bar class="navbar" />
     <the-header class="header" />
-    <main class="index">
+    <main class="index main">
       <div class="top_tr">
         <div class="infos_tr">
           <h1>Transport à collecter</h1>
@@ -52,7 +52,7 @@ export default {
   z-index: 1;
 }
 
-main {
+.main {
   margin-top: 110px;
   padding: 0 15px;
 }

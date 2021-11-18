@@ -47,7 +47,7 @@ export default {}
 }
 
 hr {
-  margin-top: 30px;
+  margin-top: 20px;
   border: none;
   width: 100%;
   background-color: var(--gray);
@@ -58,7 +58,7 @@ hr {
 /* En tête */
 
 .title_login {
-  margin-top: 50px;
+  margin-top: 10px;
   text-align: center;
 }
 

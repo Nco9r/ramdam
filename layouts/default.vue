@@ -54,7 +54,7 @@ html {
 .label p {
   margin-bottom: 3px;
   margin-left: 2px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 input {
@@ -65,7 +65,7 @@ input {
   color: var(--gray-body);
   border-radius: 0px;
   width: 100%;
-  padding: 15px;
+  padding: 18px;
   -webkit-appearance: none;
   font-size: 16px;
 }
@@ -79,7 +79,7 @@ select {
   border-radius: 0px;
   width: 100%;
   appearance: none;
-  padding: 15px;
+  padding: 18px;
   font-size: 16px;
 }
 
