@@ -45,11 +45,8 @@ export default {
   pwa: {
     manifest: {
       lang: 'fr',
-      theme_color: pwa.meta.theme_color
-    },
-    meta: {
       theme_color: 'default'
-    }
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
