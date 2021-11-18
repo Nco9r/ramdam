@@ -104,7 +104,7 @@
         </div>
         <div class="bans_header">
           <div class="logo">
-            <img src="@/assets/img/svg/logo_RF.svg" alt="" />
+            <img src="~assets/img/svg/Logo_RF.svg" alt="" />
           </div>
           <div class="btn_exit">
             <nuxt-link to="/login"><button>Déconnexion</button></nuxt-link>
