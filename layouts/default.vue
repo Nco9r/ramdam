@@ -66,6 +66,7 @@ input {
   border-radius: 0px;
   width: 100%;
   padding: 15px;
+  -webkit-appearance: none;
   font-size: 16px;
 }
 
