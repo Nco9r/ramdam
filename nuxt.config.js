@@ -48,8 +48,7 @@ export default {
       theme_color: pwa.meta.theme_color
     },
     meta: {
-      appleStatusBarStyle: 'default'
-
+      theme_color: 'default'
     }
   },
 
