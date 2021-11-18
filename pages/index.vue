@@ -28,7 +28,7 @@
             Des bordereaux apparaissent dans cet onglet lorsqu'ils sont en
             attente de collecte par votre entreprise.
           </p>
-          <nuxt-link to="/"><button>Créer un bordereau</button></nuxt-link>
+          <nuxt-link to="/create-bsdasri"><button>Créer un bordereau</button></nuxt-link>
         </div>
       </div>
     </main>
@@ -134,4 +134,6 @@ a {
   box-shadow: 3px 3px 3px #e0e0e0;
   font-weight: 700;
 }
+
+
 </style>

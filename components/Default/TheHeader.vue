@@ -71,7 +71,9 @@
               </svg>
             </div>
             <div class="behind_item">
+              <nuxt-link to="/">
               <p>À collecter</p>
+              </nuxt-link>
               <p>Collecté</p>
             </div>
           </div>

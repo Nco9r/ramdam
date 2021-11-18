@@ -39,10 +39,53 @@ html {
     --yellow: #FFC000;
     --green: #008000; 
     --green-hover: #024A02; 
+    --green-light: #F4F9F4;
     --gray: #F7F7F7; 
     --red: #D60021;
     --black: #202020; 
     --gray-body: #525252;
+    --gray-step: #dbdbdb;
+}
+
+.label {
+  margin-bottom: 15px;
+}
+
+.label p {
+  margin-bottom: 3px;
+  margin-left: 2px;
+  font-size: 12px;
+}
+
+input {
+  border: 1px solid var(--gray-step);
+  background-color: var(--gray);
+  outline-color: green;
+  font-family: 'work sans', sans-serif;
+  color: var(--gray-body);
+  border-radius: 0px;
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+}
+
+select {
+  border: 1px solid var(--yellow);
+  background-color: var(--yellow);
+  outline: none;
+  font-family: 'work sans', sans-serif;
+  color: var(--gray-body);
+  border-radius: 0px;
+  width: 100%;
+  appearance: none;
+  padding: 15px;
+  font-size: 16px;
+}
+
+
+input::placeholder {
+  font-family: 'work sans', sans-serif;
+  font-size: 12px;
 }
 
 
