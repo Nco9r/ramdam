@@ -398,11 +398,11 @@ export default {
 
 .form_pred {
   margin-top: 120px;
-  padding: 8px;
+  padding: 20px;
 }
 
 .form_pred h2 {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .form_pred hr {
@@ -629,11 +629,11 @@ input[type='date']::-webkit-calendar-picker-indicator {
 
 .form_collect {
   margin-top: 120px;
-  padding: 8px;
+  padding: 20px;
 }
 
 .form_collect h2 {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .form_collect hr {
