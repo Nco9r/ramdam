@@ -45,7 +45,11 @@ export default {
   pwa: {
     manifest: {
       lang: 'fr',
-      theme_color: '#fff'
+      theme_color: pwa.meta.theme_color
+    },
+    meta: {
+      appleStatusBarStyle: 'default'
+
     }
   },
 
