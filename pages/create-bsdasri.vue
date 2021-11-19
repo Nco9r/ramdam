@@ -771,7 +771,7 @@ select {
 }
 
 .space_3 {
-  margin-top: 10px;
+  margin-top: 11px;
 }
 
 .recap {
