@@ -48,9 +48,7 @@ export default {
       theme_color: '#fff',
       background_color: '#fff',
     },
-    meta: {
-      apple_mobile_web_app_statut_bar_style: 'default'
-    }
+    meta: [ { name: 'apple-mobile-web-app-status-bar-style', content: 'default' }]
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
