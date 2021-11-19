@@ -25,13 +25,13 @@
         <div class="process">
           <div class="text_process">
             <p>PRED</p>
-            <p :class="{ green_process: form2 }" >Collecteur</p>
+            <p :class="{ green_process: form2 || form3}" >Collecteur</p>
             <p :class="{ green_process: form3 }">Destinataire</p>
           </div>
           <div class="step_process">
             <p></p>
-            <span :class="{ green_span: form2 }"></span>
-            <p :class="{ green_step: form2 }"></p>
+            <span :class="{ green_span: form2 || form3 }"></span>
+            <p :class="{ green_step: form2 || form3 }"></p>
             <span :class="{ green_span: form3 }"></span>
             <p :class="{ green_step: form3 }"></p>
           </div>
