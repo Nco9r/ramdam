@@ -24,9 +24,9 @@
         </nuxt-link>
         <div class="process">
           <div class="text_process">
-            <p @click=";(form1 = true), (form2 = false), (form3 = false)">PRED</p>
-            <p @click=";(form1 = false), (form2 = true), (form3 = false)" :class="{ green_process: form2 || form3}" >Collecteur</p>
-            <p @click=";(form1 = false), (form2 = false), (form3 = true)" :class="{ green_process: form3 }">Destinataire</p>
+            <p @click=";(form1 = true), (form2 = false), (form3 = false), scrollTop()">PRED</p>
+            <p @click=";(form1 = false), (form2 = true), (form3 = false), scrollTop()" :class="{ green_process: form2 || form3}" >Collecteur</p>
+            <p @click=";(form1 = false), (form2 = false), (form3 = true), scrollTop()" :class="{ green_process: form3 }">Destinataire</p>
           </div>
           <div class="step_process">
             <p></p>
