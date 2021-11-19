@@ -80,18 +80,22 @@
             <p>Je souhaite ajouter une adresse de collecte ou d’enlévement.</p>
           </div>
         </div>
-        <div class="box_toggle">
-          <div class="toggle_container">
-            <div
-              class="toggle"
-              @click="toggle2 = !toggle2"
-              :class="{ toggle_bck: toggle2 }"
-            >
-              <div class="rond" :class="{ active_toggle: toggle2 }"></div>
-            </div>
+         <div class="label_group" v-if="toggle">
+             <div class="space_2"></div>
+             <p>Adresse d'enlèvement</p>
+             <hr>
+             <div class="space_2"></div>
+          <div class="label">
+            <p>Nom du site d'enlèvement</p>
+            <input type="text" placeholder="Intitulé" />
           </div>
-          <div class="text_toggle">
-            <p>Agit pour le compte de l’éco organisme agrée</p>
+           <div class="label">
+            <p>Adresse du site d'enlèvement</p>
+            <input type="text" placeholder="33000, Bordeaux" />
+          </div>
+           <div class="label">
+            <p>Informations complémentaires</p>
+            <textarea type="text" placeholder="Champs libre pour préciser"/>
           </div>
         </div>
         <h2 class="space">Fourniture déposé</h2>
@@ -214,7 +218,7 @@
         </div>
         <div class="next">
           <p>Annuler</p>
-          <p @click=";(form1 = false), (form2 = true)">Etape suivante</p>
+          <p @click=";(form1 = false), (form2 = true)">Etape suivante <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M14.83,11.29,10.59,7.05a1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.41L12.71,12,9.17,15.54a1,1,0,0,0,0,1.41,1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29l4.24-4.24A1,1,0,0,0,14.83,11.29Z"/></svg></p>
         </div>
       </div>
       <div class="form_collect" v-if="form2">
@@ -327,6 +331,7 @@ export default {
 
 .return p {
   font-weight: 700;
+  font-size: 16px;
   color: var(--black);
 }
 
@@ -341,7 +346,7 @@ export default {
   flex-flow: row;
   align-items: center;
   justify-content: space-between;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .text_process p {
@@ -363,7 +368,12 @@ export default {
 }
 
 .text_process p:nth-child(2) {
-  margin-left: 7px;
+  margin-left: 12px;
+}
+
+
+.text_process p:nth-child(3) {
+  margin-right: 12px;
 }
 
 .step_process {
@@ -480,8 +490,8 @@ select {
 }
 
 .toggle {
-  width: 45px;
-  height: 23px;
+  width: 55px;
+  height: 30px;
   border-radius: 40px;
   transition: all 0.3s;
   display: flex;
@@ -491,10 +501,10 @@ select {
 }
 
 .rond {
-  width: 15px;
+  width: 20px;
   display: flex;
   justify-content: flex-start;
-  height: 15px;
+  height: 20px;
   margin-left: 7px;
   border-radius: 50%;
   transition: all 0.3s;
@@ -507,7 +517,7 @@ select {
 
 .active_toggle {
   justify-content: flex-end;
-  margin-left: 21px;
+  margin-left: 25px;
 }
 
 .box_toggle {
@@ -525,8 +535,8 @@ select {
 }
 
 .text_toggle {
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: 18px;
   width: 100%;
 }
 
@@ -601,6 +611,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+  align-items: center;
 }
 
 .next p:nth-child(2) {
@@ -623,6 +634,13 @@ input[type='date']::-webkit-calendar-picker-indicator {
   align-items: center;
   color: var(--black);
   font-weight: 700;
+}
+
+.next svg {
+    width: 20px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* COLLECTEUR */

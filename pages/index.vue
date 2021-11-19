@@ -85,8 +85,9 @@ a {
 .refresh {
   display: flex;
   flex-flow: row;
-  border: 1px solid var(--gray-body);
+  border: 1px solid var(--gray-step);
   padding: 8px;
+  background-color: var(--white);
   border-radius: 2px;
   align-items: center;
 }

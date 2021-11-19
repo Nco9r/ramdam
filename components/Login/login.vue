@@ -89,22 +89,8 @@ hr {
   margin-left: 2px;
 }
 
-.label input {
-  border: none;
-  background-color: var(--gray);
-  outline-color: green;
-  font-family: 'work sans', sans-serif;
-  color: var(--gray-body);
-  border-radius: 0px;
-  width: 100%;
-  padding: 15px;
-  font-size: 16px;
-}
 
-input::placeholder {
-  font-family: 'work sans', sans-serif;
-  font-size: 12px;
-}
+ 
 
 .forget {
   font-size: 12px;

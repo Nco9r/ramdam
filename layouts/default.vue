@@ -24,7 +24,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  background-color: var(--white);
+  background-color: #f7f7f7;
 }
 
 *,
@@ -59,8 +59,23 @@ html {
 
 input {
   border: 1px solid var(--gray-step);
-  background-color: var(--gray);
-  outline-color: green;
+  background-color: var(--white);
+  outline-color: var(--green);
+  -webkit-outline-color: var(--green);
+  font-family: 'work sans', sans-serif;
+  color: var(--gray-body);
+  border-radius: 0px;
+  width: 100%;
+  padding: 18px;
+  -webkit-appearance: none;
+  font-size: 16px;
+}
+
+textarea {
+  border: 1px solid var(--gray-step);
+  background-color: var(--white);
+  outline-color: var(--green);
+  -webkit-outline-color: var(--green);
   font-family: 'work sans', sans-serif;
   color: var(--gray-body);
   border-radius: 0px;
@@ -85,6 +100,11 @@ select {
 
 
 input::placeholder {
+  font-family: 'work sans', sans-serif;
+  font-size: 12px;
+}
+
+textarea::placeholder {
   font-family: 'work sans', sans-serif;
   font-size: 12px;
 }

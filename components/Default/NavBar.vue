@@ -61,8 +61,8 @@ export default {}
   bottom: 0;
   right: 0;
   z-index: 1;
-  height: 80px;
-  background-color: var(--gray);
+  height: 100px;
+  background-color: var(--white);
 }
 
 .box_navbar {
