@@ -47,6 +47,9 @@ export default {
       lang: 'fr',
       theme_color: 'default'
     },
+    meta: {
+      'apple-mobile-web-app-status-bar-style': 'default'
+    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

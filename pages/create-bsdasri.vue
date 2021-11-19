@@ -25,15 +25,15 @@
         <div class="process">
           <div class="text_process">
             <p>PRED</p>
-            <p :class="{ green_process: form2 }">Collecteur</p>
-            <p>Destinataire</p>
+            <p :class="{ green_process: form2 }" >Collecteur</p>
+            <p :class="{ green_process: form3 }">Destinataire</p>
           </div>
           <div class="step_process">
             <p></p>
             <span :class="{ green_span: form2 }"></span>
             <p :class="{ green_step: form2 }"></p>
-            <span></span>
-            <p></p>
+            <span :class="{ green_span: form3 }"></span>
+            <p :class="{ green_step: form3 }"></p>
           </div>
         </div>
       </div>
@@ -45,7 +45,7 @@
         <div class="label_group">
           <div class="label">
             <p>Numéro de siret ou nom de l’entreprise</p>
-            <input type="text" class="search" />
+            <input type="text" class="search" placeholder="000 000 ..." />
           </div>
         </div>
         <div class="label_group">
@@ -117,14 +117,17 @@
             </div>
           </div>
         </div>
-        <div class="add_todo" :class="{ add_todo_check : unite}" @click="create">
-          <p >Ajouter</p>
+        <div
+          class="add_todo"
+          :class="{ add_todo_check: unite }"
+          @click="create"
+        >
+          <p>Ajouter</p>
         </div>
         <div class="recap" v-if="todos.length > 0">
           <div class="space_2"></div>
           <p>Récapitulatif :</p>
           <div class="space_3"></div>
-         
         </div>
         <div class="array" v-for="td in todos" :key="td.id">
           <p>{{ td.unite }}</p>
@@ -139,17 +142,22 @@
         <h2 class="space">Détail du déchets</h2>
         <hr />
         <div class="box_check space_2">
-          <div class="check_container" @click="check = !check">
-            <p v-if="!check"></p>
-            <p v-if="check"></p>
+          <div
+            class="check_container"
+            @click=";(check = true), (check2 = false)"
+          >
+            <p :class="{ checkgreen: check }"></p>
           </div>
           <div class="text_check">
             <p>18 01 03 DASRI d’origine humaine</p>
           </div>
         </div>
         <div class="box_check">
-          <div class="check_container" @click="check = !check">
-            <p class="no-check"></p>
+          <div
+            class="check_container"
+            @click=";(check = false), (check2 = true)"
+          >
+            <p :class="{ checkgreen: check2 }"></p>
           </div>
           <div class="text_check">
             <p>18 01 02 DASRI d’origine animale</p>
@@ -183,7 +191,11 @@
             </div>
           </div>
         </div>
-        <div class="add_todo" :class="{ add_todo_check : unite2}" @click="createC">
+        <div
+          class="add_todo"
+          :class="{ add_todo_check: unite2 }"
+          @click="createC"
+        >
           <p>Ajouter</p>
         </div>
         <div class="recap" v-if="cond.length > 0">
@@ -199,7 +211,7 @@
         <h2 class="space">Quantité remise</h2>
         <hr />
         <div class="box_toggle space_2">
-          <div class="toggle_container">
+          <div class="toggle_container" @click="addweight = !addweight">
             <div
               class="toggle"
               @click="toggle3 = !toggle3"
@@ -212,10 +224,29 @@
             <p>Je souhaite ajouter un poids.</p>
           </div>
         </div>
-        <div class="label_group">
+        <div class="addweight" v-if="addweight">
+          <p>Quantité en kg :</p>
+          <input type="text" class="weight" />
+          <p>kg</p>
+        </div>
+        <div class="box_toggle space_2" v-if="addweight">
+          <div class="toggle_container">
+            <div
+              class="toggle"
+              @click="toggle4 = !toggle4"
+              :class="{ toggle_bck: toggle4 }"
+            >
+              <div class="rond" :class="{ active_toggle: toggle4 }"></div>
+            </div>
+          </div>
+          <div class="text_toggle">
+            <p>Il s'agit d'une estimation</p>
+          </div>
+        </div>
+        <div class="label_group space_2">
           <div class="label">
             <p>Code ADR</p>
-            <input type="text" />
+            <input type="text" placeholder="Code de danger" />
           </div>
         </div>
         <div class="label_group">
@@ -224,9 +255,11 @@
             <input type="date" class="date" />
           </div>
         </div>
+        <div class="box_next">
         <div class="next">
           <p>Annuler</p>
-          <p @click=";(form1 = false), (form2 = true)">
+
+          <p @click=";(form1 = false), (form2 = true), scrollTop()">
             Etape suivante
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path
@@ -236,8 +269,9 @@
             </svg>
           </p>
         </div>
+        </div>
       </div>
-      <div class="form_collect" v-if="form2">
+      <div class="form_collect" id="form_c" v-if="form2">
         <h2>Entreprise de transport</h2>
         <hr />
         <div class="label_group collecteur">
@@ -245,46 +279,186 @@
           <p>509 185 948 00031</p>
           <p>7 RUE MIREPORT 33310 LORMONT</p>
         </div>
-        <div class="label_group fixed">
-          <p>Personne à contacter</p>
-          <p>DOUECK Matthieu</p>
+        <div class="label space_2">
+          <p>Champs libre (Optionnel)</p>
+          <textarea type="text" placeholder="Champs libre pour préciser" />
         </div>
-        <div class="label_group fixed">
-          <p>Téléphone ou Fax</p>
-          <p>09 51 32 17 34</p>
-        </div>
-        <div class="label_group fixed">
-          <p>Email</p>
-          <p>contact@ramdam-bordeaux.fr</p>
-        </div>
-        <div class="space"></div>
-        <h2>Autorisations</h2>
-        <hr />
-        <div class="label_group fixed">
-          <p>Numéro de récépissé</p>
-          <p>2019-T-056</p>
-        </div>
-        <div class="label_group flex">
-          <div class="label_flex">
-            <p>Département</p>
-            <p>33</p>
-          </div>
-          <div class="label_flex">
-            <p>Limite de validité</p>
-            <p>09/08/2024</p>
-          </div>
-        </div>
-        <div class="space"></div>
+
+        <div class="space_2"></div>
         <h2>Transport du déchet</h2>
         <hr />
+        <div class="label">
+          <p>Mode de transport</p>
+          <select type="text" placeholder="Champs libre pour préciser">
+            <option value="Route" selected>Route</option>
+            <option value="Voie aérienne">Voie aérienne</option>
+            <option value="Voie ferrée">Voie ferrée</option>
+            <option value="Voie fluviale">Voie fluviale</option>
+          </select>
+        </div>
+        <div class="label">
+          <p>Lot accepté</p>
+          <div class="box_check space_2">
+            <div
+              class="check_container"
+              @click="
+                ;(check3 = true),
+                  (check4 = false),
+                  (check5 = false),
+                  (addweight2 = false)
+              "
+            >
+              <p :class="{ checkgreen: check3 }"></p>
+            </div>
+            <div class="text_check">
+              <p>Accepté en totalité</p>
+            </div>
+          </div>
+          <div class="box_check">
+            <div
+              class="check_container"
+              @click="
+                ;(check3 = false),
+                  (check4 = true),
+                  (check5 = false),
+                  (addweight2 = true)
+              "
+            >
+              <p :class="{ checkgreen: check4 }"></p>
+            </div>
+            <div class="text_check">
+              <p>Réfusé</p>
+            </div>
+          </div>
+          <div class="box_check">
+            <div
+              class="check_container"
+              @click="
+                ;(check3 = false),
+                  (check4 = false),
+                  (check5 = true),
+                  (addweight2 = true)
+              "
+            >
+              <p :class="{ checkgreen: check5 }"></p>
+            </div>
+            <div class="text_check">
+              <p>Réfus partiel</p>
+            </div>
+          </div>
+          <div class="addweight" v-if="addweight2">
+            <p>Quantité refusée :</p>
+            <input type="text" class="weight" />
+            <p>kg</p>
+          </div>
+          <div class="label space_2" v-if="addweight2">
+            <p>Motif de refus</p>
+            <textarea type="text" placeholder="Préciser le motif de refus" />
+          </div>
+          <div class="label_group">
+            <div class="label space_2">
+              <p>Date de prise en charge</p>
+              <input type="date" class="date" />
+            </div>
+          </div>
+          <h2 class="space">Quantité transporté</h2>
+          <hr />
+          <div class="box_toggle space_2">
+            <div class="toggle_container" @click="addweight3 = !addweight3">
+              <div
+                class="toggle"
+                @click="toggle5 = !toggle5"
+                :class="{ toggle_bck: toggle5 }"
+              >
+                <div class="rond" :class="{ active_toggle: toggle5 }"></div>
+              </div>
+            </div>
+            <div class="text_toggle">
+              <p>Je souhaite ajouter une quantité.</p>
+            </div>
+          </div>
+          <div class="addweight" v-if="addweight3">
+            <p>Quantité en kg :</p>
+            <input type="text" class="weight" />
+            <p>kg</p>
+          </div>
+          <div class="box_toggle space_2" v-if="addweight3">
+            <div class="toggle_container">
+              <div
+                class="toggle"
+                @click="toggle6 = !toggle6"
+                :class="{ toggle_bck: toggle6 }"
+              >
+                <div class="rond" :class="{ active_toggle: toggle6 }"></div>
+              </div>
+            </div>
+            <div class="text_toggle">
+              <p>Il s'agit d'une estimation</p>
+            </div>
+          </div>
+        </div>
+        <p>
+          La date de remise à l'installation destinataire sera éditable après
+          l'emport du déchet
+        </p>
+        <div class="box_next">
 
+       
         <div class="next">
-          <p @click=";(form1 = true), (form2 = false)">Retour</p>
+          <p @click=";(form1 = true), (form2 = false), scrollTop()">Retour</p>
+        
           <p @click=";(form1 = false), (form2 = false), (form3 = true)">
             Etape suivante
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                fill="#FFFFFF"
+                d="M14.83,11.29,10.59,7.05a1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.41L12.71,12,9.17,15.54a1,1,0,0,0,0,1.41,1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29l4.24-4.24A1,1,0,0,0,14.83,11.29Z"
+              />
+            </svg>
           </p>
+    
         </div>
+         </div>
       </div>
+       <div class="form_destinataire" id="form_c" v-if="form3">
+        <h2>Entreprise de transport</h2>
+        <hr />
+        <div class="label_group collecteur">
+          <p><strong>SARP INDUSTRIES</strong></p>
+          <p>850 942 442 00011</p>
+          <p>32 AV JEAN JAURES 33530 BASSENS</p>
+        </div>
+        <div class="label space_2">
+          <p>Champs libre (Optionnel)</p>
+          <textarea type="text" placeholder="Champs libre pour préciser" />
+        </div>
+         <h2>Entreprise de transport</h2>
+        <hr />
+        <p>Cette section sera disponible quand le déchet aura été envoyé</p>
+        <div class="space"></div>
+         <h2>Traitement du déchet</h2>
+        <hr />
+        <p>Cette section sera disponible quand le déchet aura été reçu</p>
+         <div class="box_next des">
+
+       
+        <div class="next">
+          <p @click=";(form1 = false), (form2 = true), (form3 = false), scrollTop()">Retour</p>
+        
+          <p @click=";(form1 = false), (form2 = false), (form3 = true)">
+            Valider le BSD
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                fill="#FFFFFF"
+                d="M14.83,11.29,10.59,7.05a1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.41L12.71,12,9.17,15.54a1,1,0,0,0,0,1.41,1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29l4.24-4.24A1,1,0,0,0,14.83,11.29Z"
+              />
+            </svg>
+          </p>
+    
+        </div>
+         </div>
+       </div>
+       
     </form>
   </main>
 </template>
@@ -299,13 +473,23 @@ export default {
       toggle: false,
       toggle2: false,
       toggle3: false,
+      toggle4: false,
+      toggle5: false,
+      toggle6: false,
       todos: [],
       cond: [],
       unite: '',
       type: '',
       unite2: '',
       type2: '',
-      check: false,
+      check: true,
+      check2: false,
+      check3: true,
+      check4: false,
+      check5: false,
+      addweight: false,
+      addweight2: false,
+      addweight3: false,
     }
   },
   methods: {
@@ -317,6 +501,12 @@ export default {
       this.cond.push({ unite: this.unite2, type: this.type2 })
       ;(this.unite2 = ''), (this.type2 = '')
     },
+     scrollTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+    }
     //  deleteItem(i) {
     //      this.todos.slice(i)
     //  }
@@ -511,15 +701,13 @@ select {
   justify-content: center;
   align-items: center;
   pointer-events: none;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .add_todo_check {
   background-color: var(--green);
   pointer-events: all;
   border: 1px solid var(--green);
-
-
 }
 
 .toggle {
@@ -627,10 +815,15 @@ select {
 .check_container p {
   width: 25px;
   height: 25px;
-  background-color: var(--green);
-  background-image: url('~assets/img/svg/check.svg');
+  background-color: var(--white);
   border: 1px solid var(--green);
   border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.checkgreen {
+  background-color: var(--green) !important;
+  background-image: url('~assets/img/svg/check.svg');
 }
 
 .check_container .no-check {
@@ -654,12 +847,20 @@ input[type='date']::-webkit-calendar-picker-indicator {
   -webkit-appearance: none;
 }
 
+.box_next {
+  background-color: var(--white);
+  padding: 40px 0 40px 0;
+  border-top: 1px solid var(--gray-step);
+  margin: 30px -20px -20px -20px;
+
+}
+
 .next {
   display: flex;
   justify-content: space-between;
-  margin-top: 50px;
+
   align-items: center;
-  margin-bottom: 50px;
+
 }
 
 .next p:nth-child(2) {
@@ -667,6 +868,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
   background-color: var(--green);
   padding: 15px;
   display: flex;
+  margin-right: 15px;
   justify-content: center;
   align-items: center;
   color: var(--white);
@@ -689,6 +891,18 @@ input[type='date']::-webkit-calendar-picker-indicator {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.addweight {
+  display: flex;
+  align-items: center;
+}
+
+.weight {
+  width: 30%;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 /* COLLECTEUR */
@@ -750,5 +964,34 @@ input[type='date']::-webkit-calendar-picker-indicator {
 .flex {
   display: flex;
   justify-content: space-between;
+}
+
+
+/* DESTINATAIRE */
+
+.form_destinataire {
+  margin-top: 120px;
+  padding: 20px;
+}
+
+.form_destinataire h2 {
+  font-size: 16px;
+}
+
+.form_destinataire hr {
+  border: none;
+  background-color: var(--black);
+  width: 20px;
+  height: 2px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.des {
+    position: absolute;
+    left: 0;
+    right: 20px;
+    bottom: 20px;
 }
 </style>
