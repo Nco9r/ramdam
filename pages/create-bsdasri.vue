@@ -524,7 +524,7 @@ export default {
   padding: 20px;
   right: 0;
   height: 120px;
-  border-bottom: 1px solid var(--gray);
+  border-bottom: 1px solid var(--gray-step);
 }
 
 .box_top {
