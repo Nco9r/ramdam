@@ -80,22 +80,22 @@
             <p>Je souhaite ajouter une adresse de collecte ou d’enlévement.</p>
           </div>
         </div>
-         <div class="label_group" v-if="toggle">
-             <div class="space_2"></div>
-             <p>Adresse d'enlèvement</p>
-             <hr>
-             <div class="space_2"></div>
+        <div class="label_group" v-if="toggle">
+          <div class="space_2"></div>
+          <p>Adresse d'enlèvement</p>
+          <hr />
+          <div class="space_2"></div>
           <div class="label">
             <p>Nom du site d'enlèvement</p>
             <input type="text" placeholder="Intitulé" />
           </div>
-           <div class="label">
+          <div class="label">
             <p>Adresse du site d'enlèvement</p>
             <input type="text" placeholder="33000, Bordeaux" />
           </div>
-           <div class="label">
+          <div class="label">
             <p>Informations complémentaires</p>
-            <textarea type="text" placeholder="Champs libre pour préciser"/>
+            <textarea type="text" placeholder="Champs libre pour préciser" />
           </div>
         </div>
         <h2 class="space">Fourniture déposé</h2>
@@ -111,23 +111,30 @@
               <p>Type</p>
               <select v-model="type" name="" id="" required autocomplete="none">
                 <option disabled value="">Liste</option>
-                <option value="Bidon de 10 litres">Bidon de 10 litres</option>
+                <option value="B100 - Bidon de 10 litres">Bidon de 10l</option>
+                <option value="F05 - fût de 5l">Fût 5l</option>
               </select>
             </div>
           </div>
         </div>
-        <div class="add_todo" @click="create">
-          <p>Ajouter une fourniture</p>
+        <div class="add_todo" :class="{ add_todo_check : unite}" @click="create">
+          <p >Ajouter</p>
         </div>
         <div class="recap" v-if="todos.length > 0">
-          <p>
-            Récapitulatif : Il y a
-            <strong>{{ todos.length }}</strong> fournitures déposées
-          </p>
+          <div class="space_2"></div>
+          <p>Récapitulatif :</p>
+          <div class="space_3"></div>
+         
         </div>
         <div class="array" v-for="td in todos" :key="td.id">
           <p>{{ td.unite }}</p>
           <p>{{ td.type }}</p>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              fill="#D60021"
+              d="M10,18a1,1,0,0,0,1-1V11a1,1,0,0,0-2,0v6A1,1,0,0,0,10,18ZM20,6H16V5a3,3,0,0,0-3-3H11A3,3,0,0,0,8,5V6H4A1,1,0,0,0,4,8H5V19a3,3,0,0,0,3,3h8a3,3,0,0,0,3-3V8h1a1,1,0,0,0,0-2ZM10,5a1,1,0,0,1,1-1h2a1,1,0,0,1,1,1V6H10Zm7,14a1,1,0,0,1-1,1H8a1,1,0,0,1-1-1V8H17Zm-3-1a1,1,0,0,0,1-1V11a1,1,0,0,0-2,0v6A1,1,0,0,0,14,18Z"
+            />
+          </svg>
         </div>
         <h2 class="space">Détail du déchets</h2>
         <hr />
@@ -170,13 +177,14 @@
                 autocomplete="none"
               >
                 <option disabled value="">Liste</option>
-                <option value="Bidon de 10 litres">Bidon de 10 litres</option>
+                <option value="Bidon de 10 litres">Bidon de 10l</option>
+                <option value="fût">Fût 5l</option>
               </select>
             </div>
           </div>
         </div>
-        <div class="add_todo" @click="createC">
-          <p>Ajouter un conditionnement</p>
+        <div class="add_todo" :class="{ add_todo_check : unite2}" @click="createC">
+          <p>Ajouter</p>
         </div>
         <div class="recap" v-if="cond.length > 0">
           <p>
@@ -218,7 +226,15 @@
         </div>
         <div class="next">
           <p>Annuler</p>
-          <p @click=";(form1 = false), (form2 = true)">Etape suivante <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M14.83,11.29,10.59,7.05a1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.41L12.71,12,9.17,15.54a1,1,0,0,0,0,1.41,1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29l4.24-4.24A1,1,0,0,0,14.83,11.29Z"/></svg></p>
+          <p @click=";(form1 = false), (form2 = true)">
+            Etape suivante
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                fill="#FFFFFF"
+                d="M14.83,11.29,10.59,7.05a1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.41L12.71,12,9.17,15.54a1,1,0,0,0,0,1.41,1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29l4.24-4.24A1,1,0,0,0,14.83,11.29Z"
+              />
+            </svg>
+          </p>
         </div>
       </div>
       <div class="form_collect" v-if="form2">
@@ -258,7 +274,7 @@
             <p>09/08/2024</p>
           </div>
         </div>
-          <div class="space"></div>
+        <div class="space"></div>
         <h2>Transport du déchet</h2>
         <hr />
 
@@ -301,6 +317,9 @@ export default {
       this.cond.push({ unite: this.unite2, type: this.type2 })
       ;(this.unite2 = ''), (this.type2 = '')
     },
+    //  deleteItem(i) {
+    //      this.todos.slice(i)
+    //  }
   },
 }
 </script>
@@ -371,7 +390,6 @@ export default {
   margin-left: 12px;
 }
 
-
 .text_process p:nth-child(3) {
   margin-right: 12px;
 }
@@ -433,13 +451,14 @@ export default {
 
 .todo_fr {
   background-color: var(--gray);
-  border: 1px solid var(--gray-step);
+  border: 1px dashed var(--gray-step);
+  border-radius: 2px;
 }
 
 .box_todo {
   display: flex;
   flex-flow: row;
-  padding: 20px 15px;
+  padding: 20px 15px 30px 15px;
   align-items: center;
   justify-content: space-between;
 }
@@ -482,11 +501,25 @@ select {
 
 .add_todo {
   margin-top: 10px;
-  border: 1px solid var(--green);
+  border: 1px solid var(--gray-step);
   padding: 15px;
   display: flex;
+  background-color: var(--gray-step);
+  width: 50%;
+  color: var(--white);
+  font-weight: 700;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
+  transition: all .3s;
+}
+
+.add_todo_check {
+  background-color: var(--green);
+  pointer-events: all;
+  border: 1px solid var(--green);
+
+
 }
 
 .toggle {
@@ -548,6 +581,10 @@ select {
   margin-top: 20px;
 }
 
+.space_3 {
+  margin-top: 10px;
+}
+
 .recap {
   margin-top: 10px;
 }
@@ -555,14 +592,24 @@ select {
 .array {
   display: flex;
   margin-top: 5px;
+  background-color: var(--white);
+  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--gray-step);
 }
 
 .array p {
   font-weight: 700;
 }
 
+.array svg {
+  width: 15px;
+}
+
 .array p:nth-child(2) {
   margin-left: 10px;
+  font-weight: 400;
 }
 
 .box_check {
@@ -610,8 +657,9 @@ input[type='date']::-webkit-calendar-picker-indicator {
 .next {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 50px;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .next p:nth-child(2) {
@@ -637,8 +685,8 @@ input[type='date']::-webkit-calendar-picker-indicator {
 }
 
 .next svg {
-    width: 20px;
-    display: flex;
+  width: 20px;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -678,13 +726,12 @@ input[type='date']::-webkit-calendar-picker-indicator {
 }
 
 .fixed p {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .fixed p:nth-child(2) {
   font-weight: bold;
   font-size: 16px;
-
 }
 
 .label_flex {
@@ -692,13 +739,12 @@ input[type='date']::-webkit-calendar-picker-indicator {
 }
 
 .label_flex p {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .label_flex p:nth-child(2) {
   font-weight: bold;
   font-size: 16px;
-
 }
 
 .flex {
