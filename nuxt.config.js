@@ -45,10 +45,11 @@ export default {
   pwa: {
     manifest: {
       lang: 'fr',
-      theme_color: 'default'
+      theme_color: '#fff',
+      background_color: '#fff',
     },
     meta: {
-      'apple-mobile-web-app-status-bar-style': 'default'
+      apple_mobile_web_app_statut_bar_style: 'default'
     }
   },
 

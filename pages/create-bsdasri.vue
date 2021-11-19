@@ -45,7 +45,7 @@
         <div class="label_group">
           <div class="label">
             <p>Numéro de siret ou nom de l’entreprise</p>
-            <input type="text" class="search" placeholder="000 000 ..." />
+            <input type="text" class="search" placeholder="000 000 ..." v-model="siret" />
           </div>
         </div>
         <div class="label_group">
@@ -468,6 +468,7 @@ export default {
   data() {
     return {
       form1: true,
+      siret: '',
       form2: false,
       form3: false,
       toggle: false,
