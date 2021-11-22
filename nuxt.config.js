@@ -50,7 +50,7 @@ export default {
         httpLinkOptions: {
           credentials: 'include',
           headers: {
-            "Authorization" : "bearer ZldObEnqawMJ3wnPKdMsqzqK7Xp2vKQoTJuX1ViG"
+            "Authorization" : process.env.API_TOKEN
           }
         }
       },
