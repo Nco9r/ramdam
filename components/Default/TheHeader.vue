@@ -74,7 +74,10 @@
               <nuxt-link to="/">
               <p>À collecter</p>
               </nuxt-link>
+              <nuxt-link to="/transport/collected">
               <p>Collecté</p>
+              </nuxt-link>
+
             </div>
           </div>
           <hr />

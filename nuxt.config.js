@@ -1,3 +1,4 @@
+
 export default {
   target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -35,11 +36,27 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
+    '@nuxtjs/apollo',
     '@nuxtjs/pwa',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
+
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: 'https://api.sandbox.trackdechets.beta.gouv.fr',
+        httpLinkOptions: {
+          credentials: 'include',
+          headers: {
+            "Authorization" : "bearer ZldObEnqawMJ3wnPKdMsqzqK7Xp2vKQoTJuX1ViG"
+          }
+        }
+      },
+    },
+    authenticationType: ''
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
