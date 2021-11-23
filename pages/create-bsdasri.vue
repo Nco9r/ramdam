@@ -431,10 +431,8 @@
         </p>
         <div class="box_next">
           <div class="next">
-            <p @click=";(form1 = true), (form2 = false), scrollTop()">Retour</p>
-
             <p @click=";(form1 = false), (form2 = false), (form3 = true)">
-              Etape suivante
+              Étape suivante
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path
                   fill="#FFFFFF"

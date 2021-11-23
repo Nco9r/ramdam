@@ -1,5 +1,5 @@
-query getBsdasris { 
-    bsdasris {
+query getBsdasrisInitial { 
+    bsdasris(where: {status: {_eq: INITIAL}}) {
       totalCount
       pageInfo {
         startCursor

@@ -5,9 +5,13 @@
     <main>
       <div class="top_tr">
         <div class="infos_tr">
-          <h1>Transport collecté</h1>
+          <h1>Transport à collecter</h1>
           <p>
-            Il y a <strong>{{ bsdasris.totalCount }}</strong> <span v-if="bsdasris.totalCount === 0">bordereau</span><span v-if="bsdasris.totalCount > 1">bordereaux</span> <span v-if="bsdasris.totalCount === 0">collecté</span><span v-if="bsdasris.totalCount > 1">collectés</span>
+            Il y a <strong>{{ bsdasris.totalCount }}</strong>
+            <span v-if="bsdasris.totalCount === 0">bordereau</span
+            ><span v-if="bsdasris.totalCount > 1">bordereaux</span>
+            <span v-if="bsdasris.totalCount === 0">collecté</span
+            ><span v-if="bsdasris.totalCount > 1">collectés</span>
           </p>
         </div>
         <a href="/transport/collected">
@@ -32,21 +36,21 @@
             <p>Détenteur</p>
             <p>{{ bsd.node.emitter.company.name }}</p>
           </div>
-           <div class="item">
+          <div class="item">
             <p>Destination</p>
             <p>{{ bsd.node.destination.company.name }}</p>
           </div>
-           <div class="item">
+          <div class="item">
             <p>Déchets</p>
             <p>{{ bsd.node.waste.code }}</p>
           </div>
-           <div class="item">
+          <div class="item">
             <p>statut</p>
-            <p v-if="bsd.node.status === 'SENT'
-            ">Envoyé</p>
-             <p v-if="bsd.node.status === 'INITIAL'
-            ">Initial</p>
+            <p v-if="bsd.node.status === 'SENT'">Envoyé</p>
+            <p v-if="bsd.node.status === 'INITIAL'">Initial</p>
           </div>
+          <nuxt-link :to="`/bsdasris/preview/${bsd.node.id}`"><p>Voir le bsd</p></nuxt-link>
+
         </div>
       </div>
     </main>
@@ -56,9 +60,8 @@
 <script>
 import NavBar from '../../components/Default/NavBar.vue'
 import TheHeader from '../../components/Default/TheHeader.vue'
-import getBsdasriSent from '../../apollo/queries/getBsdasriSent'
-
-
+import getBsdasriInitial from '../../apollo/queries/getBsdasriInitial'
+// import getBsdasri from '../../apollo/queries/getBsdasri'
 
 export default {
   components: {
@@ -67,9 +70,16 @@ export default {
   },
   apollo: {
     bsdasris: {
-      query: getBsdasriSent,
+      query: getBsdasriInitial,
       prefetch: true,
     },
+    // bsdasri: {
+    //   prefetch: true,
+    //   query: bsdasri,
+    //   variables() {
+    //     return { id: this.$route.params.id }
+    //   },
+    // },
   },
 }
 </script>

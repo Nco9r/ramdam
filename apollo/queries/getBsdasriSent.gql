@@ -1,0 +1,29 @@
+query getBsdasrisSent { 
+    bsdasris(where: {status: {_eq: SENT}}) {
+      totalCount
+      pageInfo {
+        startCursor
+      }
+      edges {
+        cursor
+        node {
+          id
+          status
+          emitter {
+            company {
+              name
+            }
+          }
+          destination {
+            company {
+              name
+            }
+          }
+          waste {
+              code
+          }
+        
+        }
+      }
+    }
+  }

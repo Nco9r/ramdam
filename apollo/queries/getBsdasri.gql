@@ -1,0 +1,6 @@
+query getBsdasri {
+    bsdasri(id: $id) {
+        id
+        statuts
+    }
+}
