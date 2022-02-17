@@ -22,7 +22,7 @@ app.get('/prewiewbsdasri/:id', (req, res) => {
 
     const graphQLClient = new GraphQLClient(endpoint, {
       headers: {
-        authorization: 'bearer 5sOJiyQAT8W6y6DGrAuP76cs3f4VepNyiTGXefUb',
+        authorization: process.env.API_TOKEN,
         'Access-Control-Allow-Origin':
           'https://sandbox.trackdechets.beta.gouv.fr',
       },
@@ -103,7 +103,7 @@ app.post('/bsdasripdf/:id', (req, res) => {
 
     const graphQLClient = new GraphQLClient(endpoint, {
       headers: {
-        authorization: 'bearer 5sOJiyQAT8W6y6DGrAuP76cs3f4VepNyiTGXefUb',
+        authorization: process.env.API_TOKEN,
         'Access-Control-Allow-Origin':
           'https://sandbox.trackdechets.beta.gouv.fr',
       },
@@ -136,7 +136,7 @@ app.get('/getbsdasriall', (req, res) => {
 
     const graphQLClient = new GraphQLClient(endpoint, {
       headers: {
-        authorization: 'bearer 5sOJiyQAT8W6y6DGrAuP76cs3f4VepNyiTGXefUb',
+        authorization: process.env.API_TOKEN,
         'Access-Control-Allow-Origin':
           'https://sandbox.trackdechets.beta.gouv.fr',
       },
@@ -188,7 +188,7 @@ app.get('/getbsdasri', (req, res) => {
 
     const graphQLClient = new GraphQLClient(endpoint, {
       headers: {
-        authorization: 'bearer 5sOJiyQAT8W6y6DGrAuP76cs3f4VepNyiTGXefUb',
+        authorization: process.env.API_TOKEN,
         'Access-Control-Allow-Origin':
           'https://sandbox.trackdechets.beta.gouv.fr',
       },
@@ -240,7 +240,7 @@ app.get('/getbsdasricollected', (req, res) => {
 
     const graphQLClient = new GraphQLClient(endpoint, {
       headers: {
-        authorization: 'bearer 5sOJiyQAT8W6y6DGrAuP76cs3f4VepNyiTGXefUb',
+        authorization: process.env.API_TOKEN,
         'Access-Control-Allow-Origin':
           'https://sandbox.trackdechets.beta.gouv.fr',
       },
@@ -292,7 +292,7 @@ app.get('/getbsdasriprocessed', (req, res) => {
 
     const graphQLClient = new GraphQLClient(endpoint, {
       headers: {
-        authorization: 'bearer 5sOJiyQAT8W6y6DGrAuP76cs3f4VepNyiTGXefUb',
+        authorization: process.env.API_TOKEN,
         'Access-Control-Allow-Origin':
           'https://sandbox.trackdechets.beta.gouv.fr',
       },
@@ -347,7 +347,7 @@ app.post('/create', (req, res) => {
 
     const graphQLClient = new GraphQLClient(endpoint, {
       headers: {
-        authorization: 'bearer 5sOJiyQAT8W6y6DGrAuP76cs3f4VepNyiTGXefUb',
+        authorization: process.env.API_TOKEN,
         'Access-Control-Allow-Origin':
           'https://sandbox.trackdechets.beta.gouv.fr',
       },
@@ -452,7 +452,7 @@ app.post('/signbsdasri/:id', (req, res) => {
 
     const graphQLClient = new GraphQLClient(endpoint, {
       headers: {
-        authorization: 'bearer 5sOJiyQAT8W6y6DGrAuP76cs3f4VepNyiTGXefUb',
+        authorization: process.env.API_TOKEN,
         'Access-Control-Allow-Origin':
           'https://sandbox.trackdechets.beta.gouv.fr',
       },
@@ -499,7 +499,7 @@ app.post('/signbsdasritransporter/:id', (req, res) => {
 
     const graphQLClient = new GraphQLClient(endpoint, {
       headers: {
-        authorization: 'bearer 5sOJiyQAT8W6y6DGrAuP76cs3f4VepNyiTGXefUb',
+        authorization: process.env.API_TOKEN,
         'Access-Control-Allow-Origin':
           'https://sandbox.trackdechets.beta.gouv.fr',
       },
@@ -543,7 +543,7 @@ app.post('/update/:id', (req, res) => {
 
     const graphQLClient = new GraphQLClient(endpoint, {
       headers: {
-        authorization: 'bearer 5sOJiyQAT8W6y6DGrAuP76cs3f4VepNyiTGXefUb',
+        authorization: process.env.API_TOKEN,
         'Access-Control-Allow-Origin':
           'https://sandbox.trackdechets.beta.gouv.fr',
       },
