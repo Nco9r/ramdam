@@ -1,0 +1,14 @@
+{
+  "DefaultDropdown": {
+    "description": "Auto imported from components/Default/Dropdown.vue"
+  },
+  "DefaultNavBar": {
+    "description": "Auto imported from components/Default/NavBar.vue"
+  },
+  "DefaultTheHeader": {
+    "description": "Auto imported from components/Default/TheHeader.vue"
+  },
+  "Login": {
+    "description": "Auto imported from components/Login/login.vue"
+  }
+}

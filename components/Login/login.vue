@@ -28,7 +28,6 @@
             <nuxt-link to="/"> <button>Se connecter</button></nuxt-link>
           </div>
         </div>
-        <hr />
       </form>
     </div>
     <div class="bans">
@@ -81,7 +80,7 @@ hr {
 }
 
 .label {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .label p {
@@ -115,9 +114,9 @@ hr {
   background-color: var(--green);
   outline: none;
   color: var(--white);
-  border-radius: 0px;
+  border-radius: 4px;
   width: 100%;
-  padding: 15px;
+  padding: 18px;
   font-size: 14px;
   font-weight: 700;
 }

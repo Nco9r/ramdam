@@ -1,0 +1,128 @@
+[
+  {
+    "name": "choose-events",
+    "path": "/choose-events",
+    "component": "/Users/nicolasroux/ramdam/pages/choose-events.vue",
+    "chunkName": "pages/choose-events"
+  },
+  {
+    "name": "client-absent",
+    "path": "/client-absent",
+    "component": "/Users/nicolasroux/ramdam/pages/client-absent.vue",
+    "chunkName": "pages/client-absent"
+  },
+  {
+    "name": "create-bsdasri",
+    "path": "/create-bsdasri",
+    "component": "/Users/nicolasroux/ramdam/pages/create-bsdasri.vue",
+    "chunkName": "pages/create-bsdasri"
+  },
+  {
+    "name": "depose-fournitures",
+    "path": "/depose-fournitures",
+    "component": "/Users/nicolasroux/ramdam/pages/depose-fournitures.vue",
+    "chunkName": "pages/depose-fournitures"
+  },
+  {
+    "name": "facturation",
+    "path": "/facturation",
+    "component": "/Users/nicolasroux/ramdam/pages/facturation.vue",
+    "chunkName": "pages/facturation"
+  },
+  {
+    "name": "fiche-clients",
+    "path": "/fiche-clients",
+    "component": "/Users/nicolasroux/ramdam/pages/fiche-clients/index.vue",
+    "chunkName": "pages/fiche-clients/index"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "/Users/nicolasroux/ramdam/pages/login.vue",
+    "chunkName": "pages/login"
+  },
+  {
+    "name": "mentions-legales",
+    "path": "/mentions-legales",
+    "component": "/Users/nicolasroux/ramdam/pages/mentions-legales.vue",
+    "chunkName": "pages/mentions-legales"
+  },
+  {
+    "name": "reglages",
+    "path": "/reglages",
+    "component": "/Users/nicolasroux/ramdam/pages/reglages/index.vue",
+    "chunkName": "pages/reglages/index"
+  },
+  {
+    "name": "transport",
+    "path": "/transport",
+    "component": "/Users/nicolasroux/ramdam/pages/transport/index.vue",
+    "chunkName": "pages/transport/index"
+  },
+  {
+    "name": "bsdasris-draft-bsdasri",
+    "path": "/bsdasris/draft-bsdasri",
+    "component": "/Users/nicolasroux/ramdam/pages/bsdasris/draft-bsdasri/index.vue",
+    "chunkName": "pages/bsdasris/draft-bsdasri/index"
+  },
+  {
+    "name": "bsdasris-follow",
+    "path": "/bsdasris/follow",
+    "component": "/Users/nicolasroux/ramdam/pages/bsdasris/follow/index.vue",
+    "chunkName": "pages/bsdasris/follow/index"
+  },
+  {
+    "name": "bsdasris-story",
+    "path": "/bsdasris/story",
+    "component": "/Users/nicolasroux/ramdam/pages/bsdasris/story/index.vue",
+    "chunkName": "pages/bsdasris/story/index"
+  },
+  {
+    "name": "transport-collected",
+    "path": "/transport/collected",
+    "component": "/Users/nicolasroux/ramdam/pages/transport/collected.vue",
+    "chunkName": "pages/transport/collected"
+  },
+  {
+    "name": "transport-to-collect",
+    "path": "/transport/to-collect",
+    "component": "/Users/nicolasroux/ramdam/pages/transport/to-collect.vue",
+    "chunkName": "pages/transport/to-collect"
+  },
+  {
+    "name": "bsdasris-preview-id",
+    "path": "/bsdasris/preview/:id?",
+    "component": "/Users/nicolasroux/ramdam/pages/bsdasris/preview/_id.vue",
+    "chunkName": "pages/bsdasris/preview/_id"
+  },
+  {
+    "name": "bsdasris-sign-emitter-secret-id",
+    "path": "/bsdasris/sign-emitter-secret/:id?",
+    "component": "/Users/nicolasroux/ramdam/pages/bsdasris/sign-emitter-secret/_id.vue",
+    "chunkName": "pages/bsdasris/sign-emitter-secret/_id"
+  },
+  {
+    "name": "bsdasris-sign-transporter-id",
+    "path": "/bsdasris/sign-transporter/:id?",
+    "component": "/Users/nicolasroux/ramdam/pages/bsdasris/sign-transporter/_id.vue",
+    "chunkName": "pages/bsdasris/sign-transporter/_id"
+  },
+  {
+    "name": "fiche-clients-id",
+    "path": "/fiche-clients/:id?",
+    "component": "/Users/nicolasroux/ramdam/pages/fiche-clients/_id.vue",
+    "chunkName": "pages/fiche-clients/_id"
+  },
+  {
+    "name": "users-id",
+    "path": "/users/:id?",
+    "component": "/Users/nicolasroux/ramdam/pages/users/_id.vue",
+    "chunkName": "pages/users/_id"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/nicolasroux/ramdam/pages/index.vue",
+    "chunkName": "pages/index"
+  }
+]

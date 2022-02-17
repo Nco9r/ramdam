@@ -154,8 +154,8 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  -webkit-box-shadow: 3px 3px 3px #e0e0e0;
-  box-shadow: 3px 3px 3px #e0e0e0;
+  -webkit-box-shadow: 3px 3px 3px rgba(224, 224, 224, 0.349);
+  box-shadow: 3px 3px 3px rgba(224, 224, 224, 0.349);
 }
 
 /* Contenu header */
