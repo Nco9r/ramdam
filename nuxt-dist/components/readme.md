@@ -6,7 +6,7 @@ You can directly use them in pages and other components without the need to impo
 
 **Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
 
-- `<Login>` | `<login>` (components/Login/login.vue)
 - `<DefaultDropdown>` | `<default-dropdown>` (components/Default/Dropdown.vue)
 - `<DefaultNavBar>` | `<default-nav-bar>` (components/Default/NavBar.vue)
 - `<DefaultTheHeader>` | `<default-the-header>` (components/Default/TheHeader.vue)
+- `<Login>` | `<login>` (components/Login/login.vue)
