@@ -38,12 +38,12 @@ app.post('/senddasri', (req, res) => {
 
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
-      host: 'mail.rouxnicolas.fr',
-      port: 465,
+      host: process.env.HOST,
+      port: process.env.PORT_HOST,
       secure: true, // true for 465, false for other ports
       auth: {
-        user: 'hello@rouxnicolas.fr', // generated ethereal user
-        pass: '4kdukzw977VVC', // generated ethereal password
+        user: process.env.AUTH_USER, // generated ethereal user
+        pass: process.env.AUTH_PASS, // generated ethereal password
       },
     })
 
@@ -99,12 +99,12 @@ app.post('/absencedasri', (req, res) => {
 
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
-      host: 'mail.rouxnicolas.fr',
-      port: 465,
+      host: process.env.HOST,
+      port: process.env.PORT_HOST,
       secure: true, // true for 465, false for other ports
       auth: {
-        user: 'hello@rouxnicolas.fr', // generated ethereal user
-        pass: '4kdukzw977VVC', // generated ethereal password
+        user: process.env.AUTH_USER, // generated ethereal user
+        pass: process.env.AUTH_PASS, // generated ethereal password
       },
     })
 
@@ -187,12 +187,12 @@ app.post('/dasri', (req, res) => {
 
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
-      host: 'mail.rouxnicolas.fr',
-      port: 465,
+      host: process.env.HOST,
+      port: process.env.PORT_HOST,
       secure: true, // true for 465, false for other ports
       auth: {
-        user: 'hello@rouxnicolas.fr', // generated ethereal user
-        pass: '4kdukzw977VVC', // generated ethereal password
+        user: process.env.AUTH_USER, // generated ethereal user
+        pass: process.env.AUTH_PASS, // generated ethereal password
       },
     })
 

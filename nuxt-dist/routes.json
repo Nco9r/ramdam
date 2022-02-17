@@ -3,126 +3,147 @@
     "name": "choose-events",
     "path": "/choose-events",
     "component": "/Users/nicolasroux/ramdam/pages/choose-events.vue",
-    "chunkName": "pages/choose-events"
+    "chunkName": "pages/choose-events",
+    "_name": "_07bb2752"
   },
   {
     "name": "client-absent",
     "path": "/client-absent",
     "component": "/Users/nicolasroux/ramdam/pages/client-absent.vue",
-    "chunkName": "pages/client-absent"
+    "chunkName": "pages/client-absent",
+    "_name": "_7dffef7a"
   },
   {
     "name": "create-bsdasri",
     "path": "/create-bsdasri",
     "component": "/Users/nicolasroux/ramdam/pages/create-bsdasri.vue",
-    "chunkName": "pages/create-bsdasri"
+    "chunkName": "pages/create-bsdasri",
+    "_name": "_2d3e9a33"
   },
   {
     "name": "depose-fournitures",
     "path": "/depose-fournitures",
     "component": "/Users/nicolasroux/ramdam/pages/depose-fournitures.vue",
-    "chunkName": "pages/depose-fournitures"
+    "chunkName": "pages/depose-fournitures",
+    "_name": "_2768686b"
   },
   {
     "name": "facturation",
     "path": "/facturation",
     "component": "/Users/nicolasroux/ramdam/pages/facturation.vue",
-    "chunkName": "pages/facturation"
+    "chunkName": "pages/facturation",
+    "_name": "_3e8ed2d4"
   },
   {
     "name": "fiche-clients",
     "path": "/fiche-clients",
     "component": "/Users/nicolasroux/ramdam/pages/fiche-clients/index.vue",
-    "chunkName": "pages/fiche-clients/index"
+    "chunkName": "pages/fiche-clients/index",
+    "_name": "_3cbe23fa"
   },
   {
     "name": "login",
     "path": "/login",
     "component": "/Users/nicolasroux/ramdam/pages/login.vue",
-    "chunkName": "pages/login"
+    "chunkName": "pages/login",
+    "_name": "_774d1d9e"
   },
   {
     "name": "mentions-legales",
     "path": "/mentions-legales",
     "component": "/Users/nicolasroux/ramdam/pages/mentions-legales.vue",
-    "chunkName": "pages/mentions-legales"
+    "chunkName": "pages/mentions-legales",
+    "_name": "_4ae842ea"
   },
   {
     "name": "reglages",
     "path": "/reglages",
     "component": "/Users/nicolasroux/ramdam/pages/reglages/index.vue",
-    "chunkName": "pages/reglages/index"
+    "chunkName": "pages/reglages/index",
+    "_name": "_047b5fd2"
   },
   {
     "name": "transport",
     "path": "/transport",
     "component": "/Users/nicolasroux/ramdam/pages/transport/index.vue",
-    "chunkName": "pages/transport/index"
+    "chunkName": "pages/transport/index",
+    "_name": "_5d298eb4"
   },
   {
     "name": "bsdasris-draft-bsdasri",
     "path": "/bsdasris/draft-bsdasri",
     "component": "/Users/nicolasroux/ramdam/pages/bsdasris/draft-bsdasri/index.vue",
-    "chunkName": "pages/bsdasris/draft-bsdasri/index"
+    "chunkName": "pages/bsdasris/draft-bsdasri/index",
+    "_name": "_dce0a1ba"
   },
   {
     "name": "bsdasris-follow",
     "path": "/bsdasris/follow",
     "component": "/Users/nicolasroux/ramdam/pages/bsdasris/follow/index.vue",
-    "chunkName": "pages/bsdasris/follow/index"
+    "chunkName": "pages/bsdasris/follow/index",
+    "_name": "_6564a218"
   },
   {
     "name": "bsdasris-story",
     "path": "/bsdasris/story",
     "component": "/Users/nicolasroux/ramdam/pages/bsdasris/story/index.vue",
-    "chunkName": "pages/bsdasris/story/index"
+    "chunkName": "pages/bsdasris/story/index",
+    "_name": "_5406ef68"
   },
   {
     "name": "transport-collected",
     "path": "/transport/collected",
     "component": "/Users/nicolasroux/ramdam/pages/transport/collected.vue",
-    "chunkName": "pages/transport/collected"
+    "chunkName": "pages/transport/collected",
+    "_name": "_3cdae8ab"
   },
   {
     "name": "transport-to-collect",
     "path": "/transport/to-collect",
     "component": "/Users/nicolasroux/ramdam/pages/transport/to-collect.vue",
-    "chunkName": "pages/transport/to-collect"
+    "chunkName": "pages/transport/to-collect",
+    "_name": "_7c873f34"
   },
   {
     "name": "bsdasris-preview-id",
     "path": "/bsdasris/preview/:id?",
     "component": "/Users/nicolasroux/ramdam/pages/bsdasris/preview/_id.vue",
-    "chunkName": "pages/bsdasris/preview/_id"
+    "chunkName": "pages/bsdasris/preview/_id",
+    "_name": "_12228da3"
   },
   {
     "name": "bsdasris-sign-emitter-secret-id",
     "path": "/bsdasris/sign-emitter-secret/:id?",
     "component": "/Users/nicolasroux/ramdam/pages/bsdasris/sign-emitter-secret/_id.vue",
-    "chunkName": "pages/bsdasris/sign-emitter-secret/_id"
+    "chunkName": "pages/bsdasris/sign-emitter-secret/_id",
+    "_name": "_7d747a4c"
   },
   {
     "name": "bsdasris-sign-transporter-id",
     "path": "/bsdasris/sign-transporter/:id?",
     "component": "/Users/nicolasroux/ramdam/pages/bsdasris/sign-transporter/_id.vue",
-    "chunkName": "pages/bsdasris/sign-transporter/_id"
+    "chunkName": "pages/bsdasris/sign-transporter/_id",
+    "_name": "_7f3cf531"
   },
   {
     "name": "fiche-clients-id",
     "path": "/fiche-clients/:id?",
     "component": "/Users/nicolasroux/ramdam/pages/fiche-clients/_id.vue",
-    "chunkName": "pages/fiche-clients/_id"
+    "chunkName": "pages/fiche-clients/_id",
+    "_name": "_1ceed5aa"
   },
   {
     "name": "users-id",
     "path": "/users/:id?",
     "component": "/Users/nicolasroux/ramdam/pages/users/_id.vue",
-    "chunkName": "pages/users/_id"
+    "chunkName": "pages/users/_id",
+    "_name": "_dda1640a"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/nicolasroux/ramdam/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_0a9c63cc"
   }
 ]

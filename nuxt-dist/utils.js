@@ -200,7 +200,7 @@ export async function setContext (app, context) {
       payload: context.payload,
       error: context.error,
       base: app.router.options.base,
-      env: {"API_TOKEN":"bearer 5sOJiyQAT8W6y6DGrAuP76cs3f4VepNyiTGXefUb","API_AUTH_URL":"https://st.rouxnicolas.fr","GET_TRACK":"http://localhost:4343"}
+      env: {"API_TOKEN":"bearer 5sOJiyQAT8W6y6DGrAuP76cs3f4VepNyiTGXefUb","API_AUTH_URL":"https://st.rouxnicolas.fr","GET_TRACK":"http://localhost:4343","HOST":"mail.rouxnicolas.fr","PORT_HOST":"465","AUTH_USER":"hello@rouxnicolas.fr","AUTH_PASS":"4kdukzw977VVC"}
     }
     // Only set once
 
