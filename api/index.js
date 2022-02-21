@@ -437,7 +437,7 @@ app.post('/create', (req, res) => {
     res.send(JSON.stringify(data))
     res.status(200)
   } catch(e) {
-    res.status(400)
+    res.send.status(404)
   }}
 
 main();

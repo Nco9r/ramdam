@@ -1125,6 +1125,7 @@ export default {
     },
     createBsd() {
       console.log(this.form)
+      this.error = true
       this.$axios
         .post(`${process.env.GET_TRACK}/api/create`, {
           ...this.form,
