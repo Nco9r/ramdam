@@ -453,6 +453,7 @@
             <input
               type="radio"
               checked
+              name="waste"
               value="18 01 03*"
               v-model="form.wasteCode"
             />
@@ -463,7 +464,7 @@
         </div>
         <div class="box">
           <div class="check_radio">
-            <input type="radio" value="18 01 02*" v-model="form.wasteCode" />
+            <input type="radio" name="waste" value="18 01 02*" v-model="form.wasteCode" />
           </div>
           <div class="text_check">
             <p>18 01 02 DASRI d’origine animale</p>

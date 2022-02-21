@@ -19,9 +19,6 @@ import nuxt_plugin_cookieuniversalnuxt_7959824d from 'nuxt_plugin_cookieuniversa
 import nuxt_plugin_httpserver_755c31d2 from 'nuxt_plugin_httpserver_755c31d2' // Source: ./http.server.js (mode: 'server')
 import nuxt_plugin_http_1f98c5ea from 'nuxt_plugin_http_1f98c5ea' // Source: ./http.js (mode: 'all')
 import nuxt_plugin_strapi_de266eac from 'nuxt_plugin_strapi_de266eac' // Source: ./strapi.js (mode: 'all')
-import nuxt_plugin_workbox_720bac81 from 'nuxt_plugin_workbox_720bac81' // Source: ./workbox.js (mode: 'client')
-import nuxt_plugin_metaplugin_ad163ad8 from 'nuxt_plugin_metaplugin_ad163ad8' // Source: ./pwa/meta.plugin.js (mode: 'all')
-import nuxt_plugin_iconplugin_a3c6eff0 from 'nuxt_plugin_iconplugin_a3c6eff0' // Source: ./pwa/icon.plugin.js (mode: 'all')
 import nuxt_plugin_axios_000866b6 from 'nuxt_plugin_axios_000866b6' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_moment_0e295993 from 'nuxt_plugin_moment_0e295993' // Source: ./moment.js (mode: 'all')
 import nuxt_plugin_plugin_239e0a21 from 'nuxt_plugin_plugin_239e0a21' // Source: ./auth/plugin.js (mode: 'all')
@@ -243,18 +240,6 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_strapi_de266eac === 'function') {
     await nuxt_plugin_strapi_de266eac(app.context, inject)
-  }
-
-  if (process.client && typeof nuxt_plugin_workbox_720bac81 === 'function') {
-    await nuxt_plugin_workbox_720bac81(app.context, inject)
-  }
-
-  if (typeof nuxt_plugin_metaplugin_ad163ad8 === 'function') {
-    await nuxt_plugin_metaplugin_ad163ad8(app.context, inject)
-  }
-
-  if (typeof nuxt_plugin_iconplugin_a3c6eff0 === 'function') {
-    await nuxt_plugin_iconplugin_a3c6eff0(app.context, inject)
   }
 
   if (typeof nuxt_plugin_axios_000866b6 === 'function') {

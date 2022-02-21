@@ -1155,6 +1155,10 @@ input[type='date']::-webkit-calendar-picker-indicator {
   width: 250px;
 }
 
+.select_green p:nth-child(3) {
+  width: 250px;
+}
+
 .item_delete {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.247);

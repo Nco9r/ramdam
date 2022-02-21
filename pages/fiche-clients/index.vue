@@ -26,41 +26,6 @@
         <div class="top_fiche_client">
           <div class="title">
             <h2>Recherche par nom d'entreprise</h2>
-            <svg
-              @click="openDelete = !openDelete"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="#D60021"
-                d="M10,18a1,1,0,0,0,1-1V11a1,1,0,0,0-2,0v6A1,1,0,0,0,10,18ZM20,6H16V5a3,3,0,0,0-3-3H11A3,3,0,0,0,8,5V6H4A1,1,0,0,0,4,8H5V19a3,3,0,0,0,3,3h8a3,3,0,0,0,3-3V8h1a1,1,0,0,0,0-2ZM10,5a1,1,0,0,1,1-1h2a1,1,0,0,1,1,1V6H10Zm7,14a1,1,0,0,1-1,1H8a1,1,0,0,1-1-1V8H17Zm-3-1a1,1,0,0,0,1-1V11a1,1,0,0,0-2,0v6A1,1,0,0,0,14,18Z"
-              />
-            </svg>
-          </div>
-          <div
-            v-if="openDelete"
-            @click="openDelete = !openDelete"
-            class="item_delete"
-          ></div>
-          <div class="box_delete" v-if="openDelete">
-            <div class="title_delete">
-              <img src="~assets/img/svg/warning.svg" alt="" />
-              <p>Suppression clients</p>
-            </div>
-            <div class="content_delete">
-              <p>
-                Vous êtes sur le point de supprimer tous les clients de la base
-                de données. Êtes vous sûr de vouloir tous supprimer ?
-                Cette action est <span class="black">irréversible !</span>
-              </p>
-            </div>
-            <div class="btn_delete">
-              <p @click="openDelete = !openDelete">Retour</p>
-              <p v-if="supp" class="supp" @click="deleteAll">Supprimer</p>
-              <div v-if="loading" class="loading_supp">
-                <p>En cours de suppression...</p><div class="lds-hourglass"></div>
-            </div>
-            </div>
           </div>
           <input
             type="text"

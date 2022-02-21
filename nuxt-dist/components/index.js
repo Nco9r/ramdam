@@ -1,7 +1,7 @@
-export const DefaultDropdown = () => import('../../components/Default/Dropdown.vue' /* webpackChunkName: "components/default-dropdown" */).then(c => wrapFunctional(c.default || c))
-export const DefaultNavBar = () => import('../../components/Default/NavBar.vue' /* webpackChunkName: "components/default-nav-bar" */).then(c => wrapFunctional(c.default || c))
-export const DefaultTheHeader = () => import('../../components/Default/TheHeader.vue' /* webpackChunkName: "components/default-the-header" */).then(c => wrapFunctional(c.default || c))
-export const Login = () => import('../../components/Login/login.vue' /* webpackChunkName: "components/login" */).then(c => wrapFunctional(c.default || c))
+export { default as DefaultDropdown } from '../../components/Default/Dropdown.vue'
+export { default as DefaultNavBar } from '../../components/Default/NavBar.vue'
+export { default as DefaultTheHeader } from '../../components/Default/TheHeader.vue'
+export { default as Login } from '../../components/Login/login.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

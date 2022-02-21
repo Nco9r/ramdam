@@ -193,14 +193,14 @@ export async function setContext (app, context) {
   if (!app.context) {
     app.context = {
       isStatic: process.static,
-      isDev: false,
+      isDev: true,
       isHMR: false,
       app,
       store: app.store,
       payload: context.payload,
       error: context.error,
       base: app.router.options.base,
-      env: {"API_TOKEN":"bearer 5sOJiyQAT8W6y6DGrAuP76cs3f4VepNyiTGXefUb","API_AUTH_URL":"https://st.rouxnicolas.fr","GET_TRACK":"http://localhost:4343","HOST_EMAIL":"mail.rouxnicolas.fr","PORT_HOST":"465","AUTH_USER":"hello@rouxnicolas.fr","AUTH_PASS":"4kdukzw977VVC"}
+      env: {"API_TOKEN":"bearer 5sOJiyQAT8W6y6DGrAuP76cs3f4VepNyiTGXefUb","API_AUTH_URL":"http://localhost:8787","GET_TRACK":"http://localhost:4343","HOST_EMAIL":"mail.rouxnicolas.fr","PORT_HOST":"465","AUTH_USER":"hello.rouxnicolas@gmail.com","AUTH_PASS":"4kdukzw977VVC"}
     }
     // Only set once
 
@@ -279,7 +279,7 @@ export async function setContext (app, context) {
   app.context.next = context.next
   app.context._redirected = false
   app.context._errored = false
-  app.context.isHMR = false
+  app.context.isHMR = Boolean(context.isHMR)
   app.context.params = app.context.route.params || {}
   app.context.query = app.context.route.query || {}
 }
@@ -297,6 +297,9 @@ export function middlewareSeries (promises, appContext) {
 export function promisify (fn, context) {
   let promise
   if (fn.length === 2) {
+      console.warn('Callback-based asyncData, fetch or middleware calls are deprecated. ' +
+        'Please switch to promises or async/await syntax')
+
     // fn(context, callback)
     promise = new Promise((resolve) => {
       fn(context, function (err, data) {
