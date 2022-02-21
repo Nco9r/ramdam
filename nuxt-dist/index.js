@@ -14,13 +14,13 @@ import { createStore } from './store.js'
 /* Plugins */
 
 import nuxt_plugin_plugin_b4be79e2 from 'nuxt_plugin_plugin_b4be79e2' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_moment_0e295993 from 'nuxt_plugin_moment_0e295993' // Source: ./moment.js (mode: 'all')
 import nuxt_plugin_apollomodule_09ce2371 from 'nuxt_plugin_apollomodule_09ce2371' // Source: ./apollo-module.js (mode: 'all')
 import nuxt_plugin_cookieuniversalnuxt_7959824d from 'nuxt_plugin_cookieuniversalnuxt_7959824d' // Source: ./cookie-universal-nuxt.js (mode: 'all')
 import nuxt_plugin_httpserver_755c31d2 from 'nuxt_plugin_httpserver_755c31d2' // Source: ./http.server.js (mode: 'server')
 import nuxt_plugin_http_1f98c5ea from 'nuxt_plugin_http_1f98c5ea' // Source: ./http.js (mode: 'all')
 import nuxt_plugin_strapi_de266eac from 'nuxt_plugin_strapi_de266eac' // Source: ./strapi.js (mode: 'all')
 import nuxt_plugin_axios_000866b6 from 'nuxt_plugin_axios_000866b6' // Source: ./axios.js (mode: 'all')
-import nuxt_plugin_moment_0e295993 from 'nuxt_plugin_moment_0e295993' // Source: ./moment.js (mode: 'all')
 import nuxt_plugin_plugin_239e0a21 from 'nuxt_plugin_plugin_239e0a21' // Source: ./auth/plugin.js (mode: 'all')
 
 // Component: <ClientOnly>
@@ -222,6 +222,10 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_plugin_b4be79e2(app.context, inject)
   }
 
+  if (typeof nuxt_plugin_moment_0e295993 === 'function') {
+    await nuxt_plugin_moment_0e295993(app.context, inject)
+  }
+
   if (typeof nuxt_plugin_apollomodule_09ce2371 === 'function') {
     await nuxt_plugin_apollomodule_09ce2371(app.context, inject)
   }
@@ -244,10 +248,6 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_axios_000866b6 === 'function') {
     await nuxt_plugin_axios_000866b6(app.context, inject)
-  }
-
-  if (typeof nuxt_plugin_moment_0e295993 === 'function') {
-    await nuxt_plugin_moment_0e295993(app.context, inject)
   }
 
   if (typeof nuxt_plugin_plugin_239e0a21 === 'function') {

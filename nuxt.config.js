@@ -42,7 +42,7 @@ module.exports = {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: ['@nuxtjs/moment'],
+  buildModules: [],
   moment: {
     locales: ['fr'],
   },
@@ -55,6 +55,7 @@ module.exports = {
     '@nuxtjs/strapi',
     '@nuxtjs/apollo',
     '@nuxtjs/dotenv',
+    '@nuxtjs/moment',
     '@nuxtjs/auth',
     
   ],
